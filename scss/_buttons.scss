@@ -1,0 +1,35 @@
+@use 'variables';
+.btn-primary {
+    background-color: variables.$primary-color;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 1000px;
+    font-size: 1.125rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: variables.$primary-color ;
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background-color: variables.$primary-color;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: variables.$primary-color;
+}

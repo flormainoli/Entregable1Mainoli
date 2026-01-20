@@ -1,0 +1,13 @@
+.carousel-card {
+  max-height: 320px;
+  overflow: hidden;
+}
+
+.carousel-card .carousel-item img {
+  height: 320px;
+  object-fit: cover;
+}
+.card{
+  width: 560px;
+  height: 717px;
+}

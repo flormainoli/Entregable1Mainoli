@@ -1,0 +1,42 @@
+/*header*/
+@media (min-width: 768px) {
+    .nav {
+        display: flex;
+    }}
+/*main*/
+@media (min-width: 768px) {
+    .hero-content h2 {
+        font-size: 3.75rem;
+    }
+}
+@media (min-width: 1024px) {
+    .hero-content h2 {
+        font-size: 4.5rem;
+    }
+}
+/*Cafe cards*/
+@media (min-width: 768px) {
+    .cafes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .cafes-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 576px) {
+  .carousel-card {
+    max-height: 260px;
+  }
+
+  .carousel-card img {
+    height: 260px;
+  }
+}
+@media (min-width: 768px) {
+    .question-header h2 {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,28 @@
+@use 'variables';
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+.btn-outline-success {
+  border-color: variables.$primary-color;
+  color: variables.$primary-color;
+}
+
+.btn-outline-success:hover {
+  background-color: variables.$primary-color;
+  color: white;
+}
+
+.form-control:focus {
+  border-color: variables.$primary-color;
+  box-shadow: none;
+}
+
+.nav-link {
+  color: #374151;
+}
+
+.nav-link:hover {
+  color: #b45309;
+}
