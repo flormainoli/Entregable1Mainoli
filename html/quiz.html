@@ -4,17 +4,241 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tu cafeteria ideal en belgrano</title>
-   <script async src="/Js/practice.js"></script>
+   <script src="/Js/practice.js" defer></script>
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <h1>Encontra tu cafeteria ideal en Belgrano</h1>
-    <p>
-Este simulador permite encontrar la cafetería ideal en el barrio de Belgrano
-según las preferencias del usuario. A través de preguntas realizadas por
-cuadros de diálogo, el sistema analiza las respuestas y recomienda la opción
-más adecuada.
-</p>
+    <header>
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top px-4">
+    <div class="container-fluid">
+      <div class="navbar-layout d-flex align-items-center justify-content-around w-100">
+        <!-- logo -->
+          <img class="navbar-brand logo" src="../img/Texto del párrafo.png" alt="logo" >
+        <!-- nav -->
+        <ul class="navbar-nav flex-row">
+          <li class="nav-item me-3" id="inicio">
+            <a class="nav-link" href="../index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/html/explorar.html">Explorar Cafeterias</a>
+          </li>
+        </ul>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarContent" aria-controls="navbarContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-lg-none" id="navbarContent">
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+   <div class="quiz-container m-3">
+        <div class="quiz-wrapper">
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+                <div class="progress-text fs-1 text-center" >¡Encontremos tu cafeteria perfecta! </div>
+                <p>Responde el quiz para descubrir cuál es la cafetería perfecta para ti en el barrio de Belgrano.</p>
+            </div>
+            <!-- Quiz Contenido -->
+            <div class="quiz-content">
+                <!-- Pregunta 1 -->
+                <div class="question" data-question="1">
+                    <div class="question-header">
+                        <h2>¿Qué tipo de ambiente preferís?</h2>
+                        <p>Elegí la opción que mejor describa tu lugar ideal</p>
+                    </div>
+                    <div class="options-par"> 
+                            <button class="option-btn" data-value="tranquilo">
+                                <div class="option-content">
+                                <h3 class="text-center">Tranquilo y Relajado</h3>
+                                <p class="text-center">Un lugar silencioso para leer o trabajar</p>
+                            </div>
+                        </button>
+                        <button class="option-btn" data-value="concurrido">
+                            <div class="option-content">
+                                <h3>Concurrido y Social</h3>
+                                <p>Ambiente dinámico con buena música</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <!-- Pregunta 2 -->
+                <div class="question" data-question="2">
+                    <div class="question-header">
+                        <h2 > ¿Qué tipo de café te gusta más?</h2>
+                        <p>Seleccioná tu preferencia de café</p>
+                    </div>
+                    <div class="options-impar">
+                        <button class="option-btn" data-value="espresso">
+                            <div class="option-content ms-3 me-3">
+                                <h3>Espresso y Cortos</h3>
+                                <p>Café intenso y concentrado</p>
+                            </div>
+                        </button>
+                        <button class="option-btn" data-value="iced">
+                            <div class="option-content">
+                                <h3>Cafes frios</h3>
+                                <p>Iced Coffe,<br> Cold Brew</p>
+                            </div>
+                        </button>
+                        <button class="option-btn" data-value="latte">
+                            <div class="option-content">
+                                <h3>Con Leche</h3>
+                                <p>Lattes, capuchinos y cortados</p>
+                            </div>
+                        </button>
+                    </div>
+                <!-- Pregunta 3 -->
+                <div class="question" data-question="3">
+                    <div class="question-header">
+                        <h2>¿Es importante que tu mascota sea bienvenida?</h2>
+                        <p>Cafeteria petfriendly</p>
+                    </div>
+                    <div class="options-par">
+                        <button class="option-btn" data-value="true">
+                            <div class="option-content">
+                                <h3>Si</h3>
+                                <p>Mi mascota me acompaña a todos lados</p>
+                            </div>
+                        </button>
+                        <button class="option-btn" data-value="false">
+                            <div class="option-content">
+                                <h3>No</h3>
+                                <p>No, no es necesario</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Pregunta 4 -->
+                <div class="question" data-question="4">
+                    <div class="question-header">
+                        <h2>¿Que rango de precios estas buscando?</h2>
+                        <p>¿Cúal seria tu valor ideal?</p>
+                    </div>
+                    <div class="options-impar">
+                        <button class="option-btn" data-value="bajo">
+                            <div class="option-content">
+                                <h3>Economico</h3>
+                                <p>Un lugar con las tres <br>B: Bueno, Bonito y Barato.</p>
+                            </div>
+                        </button>
+                        <button class="option-btn" data-value="medio">
+                            <div class="option-content">
+                                <h3>Accesible</h3>
+                                <p>Busco mas un precio-calidad.</p>
+                            </div>
+                        </button>
+                        <button class="option-btn" data-value="alto">
+                            <div class="option-content">
+                                <h3>Caro</h3>
+                                <p>Una buen café tiene un gran valor.</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <!-- Pregunta 5 -->
+                <div class="question" data-question="5">
+                    <div class="question-header">
+                        <h2>¿Qué te gusta acompañar con el café?</h2>
+                        <p>Elegí tu opción de comida favorita</p>
+                    </div>
+                    <div class="options-impar">
+                        <button class="option-btn" data-value="pasteleria">
+                            <div class="option-content">
+                                <h3>Pastelería y Dulces</h3>
+                                <p>Medialunas, tortas, cookies</p>
+                            </div>
+                        </button>
+                        <button class="option-btn" data-value="brunch">
+                            <div class="option-content">
+                                <h3>Brunch Completo</h3>
+                                <p>Sandwiches, bowls, platos elaborados</p>
+                            </div>
+                        </button>
+                        <button class="option-btn" data-value="salado">
+                            <div class="option-content">
+                                <h3>Opciones Saladas</h3>
+                                <p>Chipas, Scons, Tostadas</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <!-- Pregunta 6 -->
+                <div class="question" data-question="6">
+                    <div class="question-header">
+                        <h2>¿Qué estilo de cafetería preferís?</h2>
+                        <p>Seleccioná el diseño que más te atraiga</p>
+                    </div>
+                    <div class="options-par">
+                         <button class="option-btn" data-value="moderno">
+                            <div class="option-content">
+                                <h3>Moderno y Trendy</h3>
+                                <p>Diseño contemporáneo e instagrameable</p>
+                            </div>
+                        </button>
+                        <button class="option-btn" data-value="tradicional">
+                             <div class="option-content">
+                                <h3>Tradicional y Acogedor</h3>
+                                <p>Calidez y ambiente clásico</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <!-- Pregunta 7 -->
+                <div class="question" data-question="7">
+                    <div class="question-header">
+                        <h2>¿Te importan las reseñas de otras personas?</h2>
+                    </div>
+                     <div class="options-par">
+                         <button class="option-btn" data-value="No">
+                            <div class="option-content">
+                                <h3>No</h3>
+                                <p>Prefiero formar mi propia opinión antes de tomar las demás</p>
+                            </div>
+                         </button>
+                    <button class="option-btn" data-value="true">
+                             <div class="option-content">
+                                <h3>Si</h3>
+                                <p>Valoro las experiencias anteriores</p>
+                            </div>
+                    </button>
+                    </div>
+                </div>
+                  <!-- Pregunta 8 -->
+                <div class="question" data-question="8">
+                    <div class="question-header">
+                        <h2>Necesitas opcciones Veganas o Sin TACC.</h2>
+                    </div>
+                     <div class="options-par">
+                         <button class="option-btn" data-value="No">
+                            <div class="option-content">
+                                <h3>No</h3>
+                                <p>Puedo comer y beber todo</p>
+                            </div>
+                         </button>
+                    <button class="option-btn" data-value="true">
+                             <div class="option-content">
+                                <h3>Si</h3>
+                                <p>Me gustaria que el cafe sea apto.</p>
+                            </div>
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="  text-center mt-4">
+    <button id="verResultado" class="btn btn-dark">
+        Ver mi cafetería ideal
+    </button>
+</div>
+
+<div id="resultado" class="mt-4  fs-4 fw-bold text-center"></div>
+    </div>
+    
 </body>
 </html>
+
