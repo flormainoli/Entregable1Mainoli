@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu cafeteria ideal en belgrano</title>
-   <script src="/Js/practice.js" defer></script>
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-   <link rel="stylesheet" href="../css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tu cafeteria ideal en belgrano</title>
+<script src="../Js/practice.js" defer></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js" defer></script>
+<script  defer src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 <body>
-    <header>
+<header>
   <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top px-4">
     <div class="container-fluid">
       <div class="navbar-layout d-flex align-items-center justify-content-around w-100">
@@ -24,13 +31,12 @@
             <a class="nav-link" href="/html/explorar.html">Explorar Cafeterias</a>
           </li>
         </ul>
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarContent" aria-controls="navbarContent"
-                aria-expanded="false" aria-label="Toggle navigation">
+        </button>
+        <!-- media-querie -->
+         <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse d-lg-none" id="navbarContent">
-        </div>
+        <div class="collapse navbar-collapse d-lg-none" id="navbarContent"></div>
       </div>
     </div>
   </nav>
@@ -38,14 +44,16 @@
    <div class="quiz-container m-3">
         <div class="quiz-wrapper">
             <div class="progress-container">
-                <div class="progress-bar"></div>
+                <div id="progress">
+                   <div id="progress-bar"></div>
+                </div>
                 <div class="progress-text fs-1 text-center" >¡Encontremos tu cafeteria perfecta! </div>
-                <p>Responde el quiz para descubrir cuál es la cafetería perfecta para ti en el barrio de Belgrano.</p>
+                <p class="text-center">Responde el quiz para descubrir cuál es la cafetería perfecta para ti en el barrio de Belgrano.</p>
             </div>
             <!-- Quiz Contenido -->
             <div class="quiz-content">
                 <!-- Pregunta 1 -->
-                <div class="question" data-question="1">
+                <div class="question active" data-question="1">
                     <div class="question-header">
                         <h2>¿Qué tipo de ambiente preferís?</h2>
                         <p>Elegí la opción que mejor describa tu lugar ideal</p>
@@ -66,14 +74,14 @@
                     </div>
                 </div>
                 <!-- Pregunta 2 -->
-                <div class="question" data-question="2">
+                <div class="question " data-question="2">
                     <div class="question-header">
                         <h2 > ¿Qué tipo de café te gusta más?</h2>
                         <p>Seleccioná tu preferencia de café</p>
                     </div>
                     <div class="options-impar">
                         <button class="option-btn" data-value="espresso">
-                            <div class="option-content ms-3 me-3">
+                            <div class="option-content">
                                 <h3>Espresso y Cortos</h3>
                                 <p>Café intenso y concentrado</p>
                             </div>
@@ -91,6 +99,8 @@
                             </div>
                         </button>
                     </div>
+                    <button type="button" class="btn btn-dark btn-back">Volver</button>
+                </div>
                 <!-- Pregunta 3 -->
                 <div class="question" data-question="3">
                     <div class="question-header">
@@ -111,8 +121,8 @@
                             </div>
                         </button>
                     </div>
+                    <button  type="button" class="btn btn-dark btn-back">Volver</button>
                 </div>
-
                 <!-- Pregunta 4 -->
                 <div class="question" data-question="4">
                     <div class="question-header">
@@ -139,9 +149,10 @@
                             </div>
                         </button>
                     </div>
+                    <button type="button" class="btn btn-dark btn-back">Volver</button>
                 </div>
                 <!-- Pregunta 5 -->
-                <div class="question" data-question="5">
+                <div class="question " data-question="5">
                     <div class="question-header">
                         <h2>¿Qué te gusta acompañar con el café?</h2>
                         <p>Elegí tu opción de comida favorita</p>
@@ -164,11 +175,12 @@
                                 <h3>Opciones Saladas</h3>
                                 <p>Chipas, Scons, Tostadas</p>
                             </div>
-                        </button>
-                    </div>
+                        </button>  
+                   </div>
+                   <button  type="button" class="btn btn-dark btn-back">Volver</button>
                 </div>
                 <!-- Pregunta 6 -->
-                <div class="question" data-question="6">
+                <div class="question " data-question="6">
                     <div class="question-header">
                         <h2>¿Qué estilo de cafetería preferís?</h2>
                         <p>Seleccioná el diseño que más te atraiga</p>
@@ -187,14 +199,15 @@
                             </div>
                         </button>
                     </div>
+                    <button  type="button" class="btn btn-dark btn-back">Volver</button>
                 </div>
                 <!-- Pregunta 7 -->
-                <div class="question" data-question="7">
+                <div class="question " data-question="7">
                     <div class="question-header">
                         <h2>¿Te importan las reseñas de otras personas?</h2>
                     </div>
                      <div class="options-par">
-                         <button class="option-btn" data-value="No">
+                         <button class="option-btn" data-value="false">
                             <div class="option-content">
                                 <h3>No</h3>
                                 <p>Prefiero formar mi propia opinión antes de tomar las demás</p>
@@ -207,38 +220,39 @@
                             </div>
                     </button>
                     </div>
+                    <button  type="button" class="btn btn-dark btn-back">Volver</button>
                 </div>
                   <!-- Pregunta 8 -->
-                <div class="question" data-question="8">
+                <div class="question " data-question="8">
                     <div class="question-header">
                         <h2>Necesitas opcciones Veganas o Sin TACC.</h2>
                     </div>
                      <div class="options-par">
-                         <button class="option-btn" data-value="No">
+                         <button class="option-btn" data-value="false">
                             <div class="option-content">
                                 <h3>No</h3>
                                 <p>Puedo comer y beber todo</p>
                             </div>
                          </button>
-                    <button class="option-btn" data-value="true">
+                          <button class="option-btn" data-value="true">
                              <div class="option-content">
                                 <h3>Si</h3>
                                 <p>Me gustaria que el cafe sea apto.</p>
                             </div>
-                    </button>
-                    </div>
+                           </button>
+                     </div>
+                     <button type="button" class="btn btn-dark btn-back">Volver</button>
                 </div>
             </div>
+        <!-- Resultado -->
+        <div class="text-center mt-4 botonFinal">
+         <button id="verResultado" class="btn btn-dark text-center align-items-center">
+           Ver mi cafetería ideal
+         </button>
         </div>
-        <div class="  text-center mt-4">
-    <button id="verResultado" class="btn btn-dark">
-        Ver mi cafetería ideal
-    </button>
-</div>
-
-<div id="resultado" class="mt-4  fs-4 fw-bold text-center"></div>
-    </div>
-    
+         <div id="resultado" class="mt-4"></div>
+         </div>
+   </div>
 </body>
 </html>
 

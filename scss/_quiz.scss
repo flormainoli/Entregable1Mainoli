@@ -23,25 +23,26 @@
     border-bottom: 2px solid #f3f4f6;
 }
 
-.progress-bar {
+#progress-bar {
     height: 8px;
     background-color: #e5e7eb;
     border-radius: 9999px;
     overflow: hidden;
     margin-bottom: 0.75rem;
+   
 }
 
-.progress-bar::after {
+#progress-bar::after {
     content: '';
     display: block;
     height: 100%;
     background: linear-gradient(90deg, #f59e0b, #d97706);
-    border-radius: 9999px;
-    width: 20%;
+    border-radius: 9999px;;
     transition: width 0.4s ease;
+    width: 0%;
 }
 
-.progress-text {
+#progress-text {
     text-align: center;
     font-size: 0.875rem;
     font-weight: 600;
@@ -51,15 +52,17 @@
 /* Quiz Content */
 .quiz-content {
     padding: 2rem;
-    min-height: 500px;
+    min-height: fit-content;
 }
 /* Question */
 .question {
-    display: block;
-    animation: fadeInUp 0.5s ease;
+  display: none;
 }
 
-
+.question.active {
+  display: block;
+    animation: fadeInUp 0.5s ease;
+}
 
 @keyframes fadeInUp {
     from {
@@ -87,7 +90,6 @@
     border-radius: 50%;
     margin-bottom: 1.5rem;
 }
-
 
 .question-header h2 {
     font-size: 1.75rem;
@@ -372,10 +374,30 @@
         width: auto;
     }
 }
-.resultadoDiv{
-    width: 250px;
-    height: 250px;
+
+.resultadoDiv h2,
+.resultadoDiv h3 {
+  margin: 0.25rem 0;
+  width: 100%;
+  text-align: center;
+}
+#contenedor-cafes-resultado .col.primera {
+display: flex;
+justify-content: center;
+ 
+}
+#verResultado {
+  display: none;
+  width: 270px;
+  height: 70px;
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 5rem;
+}
+
+ .botonFinal{
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+ }

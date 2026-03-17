@@ -5,16 +5,21 @@
 <meta name="author" content="Florencia Mainoli">
 <meta name="keywords" content="Cafe de Especialidad, Tu Cafe Belgrano, Cafeteria, Merienda, Buenos Aires"/>
 <meta name="description" content="Donde tomar un Cafe en Belgrano?, Encontra tu cafe ideal de Belgrano, CABA">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="../css/style.css">
-<script defer src="../Js/explorar.js"></script>
-<link rel="icon" type="image/x-icon" href="">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="../Js/practice.js"defer></script>
+<script  defer src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="../Js/explorar.js" defer ></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <title> Tu Cafe, Belgrano </title>
 </head>
 <body>
@@ -23,7 +28,6 @@
     <div class="container-fluid">
       <div class="navbar-layout d-flex align-items-center justify-content-around w-100">
         <!-- Logo -->
-        
         <img class="navbar-brand logo"src="../img/Texto del párrafo.png" alt="logo" >
         <!-- Nav -->
         <ul class="navbar-nav flex-row">
@@ -35,14 +39,12 @@
           </li>
           <li class="nav-item">
          <!-- Buscador -->
-        <form class="d-flex mx-3" role="search">
-          <input class="form-control me-2" type="search"  id="searchbar" placeholder="Escribí una cafetería">
-        </form>
+        <div class="d-flex mx-3">
+          <input class="form-control me-2" type="search" id="searchbar" placeholder="Escribí una cafetería">
+        </div>
           </li>
         </ul>
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarContent" aria-controls="navbarContent"
-                aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <!-- media-querie -->
@@ -55,11 +57,8 @@
 <main>
     <h1 class="display-5 text-center p-3 m-2" id="titulo">Cafes de Belgrano</h1>
     <div class="container px-4">
-        <div class="row row-cols-1 row-cols-md-2 g-4" id="contenedor-cafes">
-        </div></div>
-                
-        
+        <div class="row row-cols-1 row-cols-md-2 g-4" id="contenedor-cafes"></div>
+   </div>
 </main>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </html>
