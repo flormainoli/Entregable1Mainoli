@@ -261,13 +261,13 @@ function visualizarCafes(lista, contenedorId = "contenedor-cafes") {
                     </div>
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img src="../img/${cafe.img[0]}" class="d-block card-img-top w-100" alt="Imagen cafeteria">
+                        <img src="/img/${cafe.img[0]}" class="d-block card-img-top w-100" alt="Imagen cafeteria">
                       </div>
                       <div class="carousel-item">
-                         <img src="../img/${cafe.img[1]}" class="d-block card-img-top w-100" alt="Imagen cafeteria">
+                         <img src="/img/${cafe.img[1]}" class="d-block card-img-top w-100" alt="Imagen cafeteria">
                       </div>
                       <div class="carousel-item">
-                        <img src="../img/${cafe.img[2]}" class="d-block card-img-top w-100" alt="Imagen cafeteria">
+                        <img src="/img/${cafe.img[2]}" class="d-block card-img-top w-100" alt="Imagen cafeteria">
                       </div>
                     </div>
                   <button class="carousel-control-prev" type="button" data-bs-target="#carousel-${index}" data-bs-slide="prev">
