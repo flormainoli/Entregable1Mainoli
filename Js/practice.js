@@ -247,6 +247,9 @@ const cafes = [
 const cafeQuiz = cafes;
 //funcion para visualizar cards
 function visualizarCafes(lista, contenedorId = "contenedor-cafes") {
+  const rutaImg = window.location.pathname.includes("/html/")
+  ? "../img/"
+  : "img/";
   const contenedor = document.getElementById(contenedorId);
   if (!contenedor) return; // Si no existe el contenedor, no hacer nada
   contenedor.innerHTML = "";
@@ -261,13 +264,13 @@ function visualizarCafes(lista, contenedorId = "contenedor-cafes") {
                     </div>
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img src="${window.location.pathname.includes('/html/') ? '../img/' : 'img/'}${cafe.img[0]}" class="d-block card-img-top w-100" alt="Imagen cafeteria">
+                        <img src="${rutaImg}${cafe.img[0]}" class="d-block card-img-top w-100" alt="Imagen cafeteria">
                       </div>
                       <div class="carousel-item">
-                         <img src="${window.location.pathname.includes('/html/') ? '../img/' : 'img/'}${cafe.img[1]}" class="d-block card-img-top w-100" alt="Imagen cafeteria">
+                         <img src="${rutaImg}${cafe.img[1]}" class="d-block card-img-top w-100" alt="Imagen cafeteria">
                       </div>
                       <div class="carousel-item">
-                        <img src="${window.location.pathname.includes('/html/') ? '../img/' : 'img/'}${cafe.img[2]}" class="d-block card-img-top w-100" alt="Imagen cafeteria">
+                        <img src="${rutaImg}${cafe.img[2]}" class="d-block card-img-top w-100" alt="Imagen cafeteria">
                       </div>
                     </div>
                   <button class="carousel-control-prev" type="button" data-bs-target="#carousel-${index}" data-bs-slide="prev">
