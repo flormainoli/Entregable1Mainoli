@@ -1,6 +1,6 @@
 //importar datos de cafes
 let cafe = [];
-fetch("js/cafes.json")
+fetch("Js/cafes.json")
   .then(response => response.json())
   .then(data => {
     cafe = data;
@@ -11,7 +11,7 @@ fetch("js/cafes.json")
     visualizarCafes(cafesDestacados, "cafes-destacados", "img/");
   })
   .catch(error => console.error("Error cargando cafés:", error));
-  
+
   const agregarCafe = document.getElementById("addCafeBtn");
  const formAgregarCafe = document.getElementById("formAgregarCafe");
 

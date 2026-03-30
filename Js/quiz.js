@@ -1,5 +1,5 @@
   let cafeQuiz = [];
-fetch("../js/cafes.json")
+fetch("../Js/cafes.json")
   .then(res => res.json())
   .then(data => {
     cafeQuiz = data;
