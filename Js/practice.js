@@ -244,11 +244,25 @@ reservas.push({
   nombreApellido: nombreApellido.value,
   email: email.value
 });
+const nombre = nombreApellido.value.trim();
+
+  const nombreValido = /^[A-Za-zÁÉÍÓÚáéíóúñÑ\s]+$/;
+
+  if (!nombreValido.test(nombre)) {
+    Toastify({
+      text: "El nombre solo puede contener letras",
+      duration: 3000,
+      gravity: "top",
+      position: "right",
+      style: { background: "red" }
+    }).showToast();
+    return;}
 
 localStorage.setItem("reservas", JSON.stringify(reservas));
    mostrarReservaConfirmada(cafe, datosReserva);
   });
-}}
+}
+}
 
 //funcion para msotrar reserva
 function mostrarReservaConfirmada(cafe, reserva) {
