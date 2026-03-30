@@ -1,14 +1,27 @@
-// El array 'cafes' y función 'visualizarCafes' se cargan desde practice.js
-visualizarCafes(cafes);
-const buscador = document.querySelector("#searchbar");
+let cafes = [];
+fetch("../js/cafes.json") 
+  .then(response => response.json())
+  .then(data => {
 
-buscador.addEventListener("input", () => {
-  const texto = buscador.value.toLowerCase();
-  const cafesFiltrados = cafes.filter(cafe => cafe.nombre.toLowerCase().includes(texto));
-   if (cafesFiltrados.length === 0) {
-    document.getElementById("contenedor-cafes").innerHTML =
-      `<p class="text-center mt-4"> No se encontraron cafeterías con ese nombre</p>`;
-  } else {
-    visualizarCafes(cafesFiltrados);
-  }
-});
+    cafes = data;
+    visualizarCafes(cafes, "contenedor-cafes", "../img/");
+
+    const buscador = document.querySelector("#searchbar");
+
+    buscador.addEventListener("input", () => {
+      const texto = buscador.value.toLowerCase();
+
+      const cafesFiltrados = cafes.filter(cafe =>
+        cafe.nombre.toLowerCase().includes(texto)
+      );
+
+      if (cafesFiltrados.length === 0) {
+        document.getElementById("contenedor-cafes").innerHTML =
+          `<p class="text-center mt-4">No se encontraron cafeterías</p>`;
+      } else {
+        visualizarCafes(cafesFiltrados);
+      }
+    });
+
+  })
+  .catch(error => console.error("Error:", error));
